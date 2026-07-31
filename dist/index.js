@@ -1,0 +1,57 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhooksService = exports.WaitlistService = exports.V1Service = exports.UnsubscribeService = exports.TemplatesService = exports.SuppressionsService = exports.SmsService = exports.SenderEmailsService = exports.OtpService = exports.MessagesService = exports.EmailsService = exports.DomainsService = exports.DefaultService = exports.BillingService = exports.AuthService = exports.AudiencesService = exports.ApiKeysService = exports.AnalyticsService = exports.AdminService = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.Senviok = exports.SenviokClient = void 0;
+/* generated using openapi-typescript-codegen -- do not edit */
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+var SenviokClient_1 = require("./SenviokClient");
+Object.defineProperty(exports, "SenviokClient", { enumerable: true, get: function () { return SenviokClient_1.SenviokClient; } });
+Object.defineProperty(exports, "Senviok", { enumerable: true, get: function () { return SenviokClient_1.Senviok; } });
+var ApiError_1 = require("./core/ApiError");
+Object.defineProperty(exports, "ApiError", { enumerable: true, get: function () { return ApiError_1.ApiError; } });
+var BaseHttpRequest_1 = require("./core/BaseHttpRequest");
+Object.defineProperty(exports, "BaseHttpRequest", { enumerable: true, get: function () { return BaseHttpRequest_1.BaseHttpRequest; } });
+var CancelablePromise_1 = require("./core/CancelablePromise");
+Object.defineProperty(exports, "CancelablePromise", { enumerable: true, get: function () { return CancelablePromise_1.CancelablePromise; } });
+Object.defineProperty(exports, "CancelError", { enumerable: true, get: function () { return CancelablePromise_1.CancelError; } });
+var OpenAPI_1 = require("./core/OpenAPI");
+Object.defineProperty(exports, "OpenAPI", { enumerable: true, get: function () { return OpenAPI_1.OpenAPI; } });
+var AdminService_1 = require("./services/AdminService");
+Object.defineProperty(exports, "AdminService", { enumerable: true, get: function () { return AdminService_1.AdminService; } });
+var AnalyticsService_1 = require("./services/AnalyticsService");
+Object.defineProperty(exports, "AnalyticsService", { enumerable: true, get: function () { return AnalyticsService_1.AnalyticsService; } });
+var ApiKeysService_1 = require("./services/ApiKeysService");
+Object.defineProperty(exports, "ApiKeysService", { enumerable: true, get: function () { return ApiKeysService_1.ApiKeysService; } });
+var AudiencesService_1 = require("./services/AudiencesService");
+Object.defineProperty(exports, "AudiencesService", { enumerable: true, get: function () { return AudiencesService_1.AudiencesService; } });
+var AuthService_1 = require("./services/AuthService");
+Object.defineProperty(exports, "AuthService", { enumerable: true, get: function () { return AuthService_1.AuthService; } });
+var BillingService_1 = require("./services/BillingService");
+Object.defineProperty(exports, "BillingService", { enumerable: true, get: function () { return BillingService_1.BillingService; } });
+var DefaultService_1 = require("./services/DefaultService");
+Object.defineProperty(exports, "DefaultService", { enumerable: true, get: function () { return DefaultService_1.DefaultService; } });
+var DomainsService_1 = require("./services/DomainsService");
+Object.defineProperty(exports, "DomainsService", { enumerable: true, get: function () { return DomainsService_1.DomainsService; } });
+var EmailsService_1 = require("./services/EmailsService");
+Object.defineProperty(exports, "EmailsService", { enumerable: true, get: function () { return EmailsService_1.EmailsService; } });
+var MessagesService_1 = require("./services/MessagesService");
+Object.defineProperty(exports, "MessagesService", { enumerable: true, get: function () { return MessagesService_1.MessagesService; } });
+var OtpService_1 = require("./services/OtpService");
+Object.defineProperty(exports, "OtpService", { enumerable: true, get: function () { return OtpService_1.OtpService; } });
+var SenderEmailsService_1 = require("./services/SenderEmailsService");
+Object.defineProperty(exports, "SenderEmailsService", { enumerable: true, get: function () { return SenderEmailsService_1.SenderEmailsService; } });
+var SmsService_1 = require("./services/SmsService");
+Object.defineProperty(exports, "SmsService", { enumerable: true, get: function () { return SmsService_1.SmsService; } });
+var SuppressionsService_1 = require("./services/SuppressionsService");
+Object.defineProperty(exports, "SuppressionsService", { enumerable: true, get: function () { return SuppressionsService_1.SuppressionsService; } });
+var TemplatesService_1 = require("./services/TemplatesService");
+Object.defineProperty(exports, "TemplatesService", { enumerable: true, get: function () { return TemplatesService_1.TemplatesService; } });
+var UnsubscribeService_1 = require("./services/UnsubscribeService");
+Object.defineProperty(exports, "UnsubscribeService", { enumerable: true, get: function () { return UnsubscribeService_1.UnsubscribeService; } });
+var V1Service_1 = require("./services/V1Service");
+Object.defineProperty(exports, "V1Service", { enumerable: true, get: function () { return V1Service_1.V1Service; } });
+var WaitlistService_1 = require("./services/WaitlistService");
+Object.defineProperty(exports, "WaitlistService", { enumerable: true, get: function () { return WaitlistService_1.WaitlistService; } });
+var WebhooksService_1 = require("./services/WebhooksService");
+Object.defineProperty(exports, "WebhooksService", { enumerable: true, get: function () { return WebhooksService_1.WebhooksService; } });

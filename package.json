@@ -1,0 +1,19 @@
+{
+  "name": "senviok",
+  "version": "1.0.1",
+  "description": "TypeScript/JavaScript SDK for Senviok API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "generate": "npx openapi-typescript-codegen -i ../SenviokBackend/docs/openapi.json -o src -c fetch --name SenviokClient",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "openapi-typescript-codegen": "^0.31.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "senviok": "^1.0.0"
+  }
+}
