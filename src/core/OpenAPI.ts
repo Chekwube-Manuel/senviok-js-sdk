@@ -20,7 +20,7 @@ export type OpenAPIConfig = {
 };
 
 export const OpenAPI: OpenAPIConfig = {
-    BASE: 'http://localhost:5033',
+    BASE: 'https://api.senviok.live',
     VERSION: '1',
     WITH_CREDENTIALS: false,
     CREDENTIALS: 'include',

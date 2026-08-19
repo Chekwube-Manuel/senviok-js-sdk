@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OpenAPI = void 0;
 exports.OpenAPI = {
-    BASE: 'http://localhost:5033',
+    BASE: 'https://api.senviok.live',
     VERSION: '1',
     WITH_CREDENTIALS: false,
     CREDENTIALS: 'include',

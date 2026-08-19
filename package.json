@@ -1,6 +1,6 @@
 {
   "name": "senviok",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript/JavaScript SDK for Senviok API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,8 +12,5 @@
     "@types/node": "^26.1.2",
     "openapi-typescript-codegen": "^0.31.0",
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "senviok": "^1.0.0"
   }
 }
