@@ -20,6 +20,7 @@ import { V1Service } from './services/V1Service';
 import { WaitlistService } from './services/WaitlistService';
 import { WebhooksService } from './services/WebhooksService';
 import type { SenviokApiEndpointsEmailsSendEmailRequest } from './models/SenviokApiEndpointsEmailsSendEmailRequest';
+import type { UploadedEmailAttachment } from './models/UploadedEmailAttachment';
 import type { SenviokApiEndpointsSmsSendSmsRequest } from './models/SenviokApiEndpointsSmsSendSmsRequest';
 import type { SenviokApiEndpointsWebhooksCreateWebhookRequest } from './models/SenviokApiEndpointsWebhooksCreateWebhookRequest';
 import type { SenviokApiEndpointsTemplatesCreateTemplateRequest } from './models/SenviokApiEndpointsTemplatesCreateTemplateRequest';
@@ -59,17 +60,18 @@ export declare class Senviok {
         BASE?: string;
     });
     get emails(): {
-        send: (options: SenviokApiEndpointsEmailsSendEmailRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsEmailsSendEmailResponse>;
+        send: (options: SenviokApiEndpointsEmailsSendEmailRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsEmailsSendEmailResponse>;
+        uploadAttachment: (file: Blob) => import("./core/CancelablePromise").CancelablePromise<UploadedEmailAttachment>;
     };
     get sms(): {
-        send: (options: SenviokApiEndpointsSmsSendSmsRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsSmsSendSmsResponse>;
+        send: (options: SenviokApiEndpointsSmsSendSmsRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsSmsSendSmsResponse>;
     };
     get whatsapp(): {
         send: (options: {
             to: string;
             from: string;
             text: string;
-        }) => import(".").CancelablePromise<unknown>;
+        }) => import("./core/CancelablePromise").CancelablePromise<unknown>;
     };
     get messages(): {
         list: (options?: {
@@ -83,47 +85,47 @@ export declare class Senviok {
             subject?: string;
             startDate?: string;
             endDate?: string;
-        }) => import(".").CancelablePromise<import(".").SenviokApiEndpointsAnalyticsGetLogsResponse>;
+        }) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsAnalyticsGetLogsResponse>;
     };
     get webhooks(): {
-        create: (options: SenviokApiEndpointsWebhooksCreateWebhookRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsWebhooksWebhookResponse>;
-        list: () => import(".").CancelablePromise<import(".").SenviokApiEndpointsWebhooksListWebhooksResponse>;
-        delete: (id: string) => import(".").CancelablePromise<void>;
-        logs: (webhookId: string) => import(".").CancelablePromise<import(".").SenviokApiEndpointsWebhooksGetWebhookDeliveriesResponse>;
+        create: (options: SenviokApiEndpointsWebhooksCreateWebhookRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsWebhooksWebhookResponse>;
+        list: () => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsWebhooksListWebhooksResponse>;
+        delete: (id: string) => import("./core/CancelablePromise").CancelablePromise<void>;
+        logs: (webhookId: string) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsWebhooksGetWebhookDeliveriesResponse>;
         verifySignature: (rawBody: string, signature: string, secret: string) => boolean;
     };
     get templates(): {
-        create: (options: SenviokApiEndpointsTemplatesCreateTemplateRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse>;
-        list: () => import(".").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse[]>;
-        get: (id: string) => import(".").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse>;
-        update: (id: string, options: SenviokApiEndpointsTemplatesUpdateTemplateRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse>;
-        delete: (id: string) => import(".").CancelablePromise<void>;
+        create: (options: SenviokApiEndpointsTemplatesCreateTemplateRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse>;
+        list: () => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse[]>;
+        get: (id: string) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse>;
+        update: (id: string, options: SenviokApiEndpointsTemplatesUpdateTemplateRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsTemplatesTemplateResponse>;
+        delete: (id: string) => import("./core/CancelablePromise").CancelablePromise<void>;
     };
     get domains(): {
-        create: (options: SenviokApiEndpointsDomainsCreateDomainRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsDomainsDomainResponse>;
-        list: () => import(".").CancelablePromise<import(".").SenviokApiEndpointsDomainsListDomainsResponse>;
-        getDkim: (id: string) => import(".").CancelablePromise<import(".").SenviokApiEndpointsDomainsGetDomainDkimResponse>;
-        verify: (id: string) => import(".").CancelablePromise<import(".").SenviokApiEndpointsDomainsVerifyDomainResponse>;
+        create: (options: SenviokApiEndpointsDomainsCreateDomainRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsDomainsDomainResponse>;
+        list: () => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsDomainsListDomainsResponse>;
+        getDkim: (id: string) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsDomainsGetDomainDkimResponse>;
+        verify: (id: string) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsDomainsVerifyDomainResponse>;
     };
     get audiences(): {
-        create: (options: SenviokApiEndpointsAudiencesCreateAudienceRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsAudiencesAudienceResponse>;
-        list: () => import(".").CancelablePromise<import(".").SenviokApiEndpointsAudiencesListAudiencesResponse>;
-        delete: (id: string) => import(".").CancelablePromise<void>;
+        create: (options: SenviokApiEndpointsAudiencesCreateAudienceRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsAudiencesAudienceResponse>;
+        list: () => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsAudiencesListAudiencesResponse>;
+        delete: (id: string) => import("./core/CancelablePromise").CancelablePromise<void>;
     };
     get contacts(): {
-        create: (audienceId: string, options: SenviokApiEndpointsContactsCreateContactRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsContactsContactResponse>;
-        list: (audienceId: string) => import(".").CancelablePromise<import(".").SenviokApiEndpointsContactsListContactsResponse>;
-        delete: (audienceId: string, id: string) => import(".").CancelablePromise<void>;
+        create: (audienceId: string, options: SenviokApiEndpointsContactsCreateContactRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsContactsContactResponse>;
+        list: (audienceId: string) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsContactsListContactsResponse>;
+        delete: (audienceId: string, id: string) => import("./core/CancelablePromise").CancelablePromise<void>;
     };
     get suppressions(): {
-        create: (options: SenviokApiEndpointsSuppressionsCreateSuppressionRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsSuppressionsSuppressionResponse>;
-        list: () => import(".").CancelablePromise<import(".").SenviokApiEndpointsSuppressionsSuppressionResponse[]>;
-        delete: (id: string) => import(".").CancelablePromise<void>;
+        create: (options: SenviokApiEndpointsSuppressionsCreateSuppressionRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsSuppressionsSuppressionResponse>;
+        list: () => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsSuppressionsSuppressionResponse[]>;
+        delete: (id: string) => import("./core/CancelablePromise").CancelablePromise<void>;
     };
     get apiKeys(): {
-        create: (options: SenviokApiEndpointsApiKeysCreateApiKeyRequest) => import(".").CancelablePromise<import(".").SenviokApiEndpointsApiKeysCreateApiKeyResponse>;
-        list: () => import(".").CancelablePromise<import(".").SenviokApiEndpointsApiKeysListApiKeysResponse>;
-        delete: (id: string) => import(".").CancelablePromise<void>;
+        create: (options: SenviokApiEndpointsApiKeysCreateApiKeyRequest) => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsApiKeysCreateApiKeyResponse>;
+        list: () => import("./core/CancelablePromise").CancelablePromise<import(".").SenviokApiEndpointsApiKeysListApiKeysResponse>;
+        delete: (id: string) => import("./core/CancelablePromise").CancelablePromise<void>;
     };
 }
 export {};

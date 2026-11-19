@@ -68,7 +68,10 @@ class Senviok {
         return {
             send: (options) => {
                 return this.client.emails.senviokApiEndpointsEmailsSendEmailEndpoint(options);
-            }
+            },
+            uploadAttachment: (file) => {
+                return this.client.emails.uploadEmailAttachmentEndpoint({ file });
+            },
         };
     }
     get sms() {

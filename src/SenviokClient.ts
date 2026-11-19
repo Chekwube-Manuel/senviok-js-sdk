@@ -22,6 +22,7 @@ import { V1Service } from './services/V1Service';
 import { WaitlistService } from './services/WaitlistService';
 import { WebhooksService } from './services/WebhooksService';
 import type { SenviokApiEndpointsEmailsSendEmailRequest } from './models/SenviokApiEndpointsEmailsSendEmailRequest';
+import type { UploadedEmailAttachment } from './models/UploadedEmailAttachment';
 import type { SenviokApiEndpointsSmsSendSmsRequest } from './models/SenviokApiEndpointsSmsSendSmsRequest';
 import type { SenviokApiEndpointsWebhooksCreateWebhookRequest } from './models/SenviokApiEndpointsWebhooksCreateWebhookRequest';
 import type { SenviokApiEndpointsTemplatesCreateTemplateRequest } from './models/SenviokApiEndpointsTemplatesCreateTemplateRequest';
@@ -102,7 +103,10 @@ export class Senviok {
         return {
             send: (options: SenviokApiEndpointsEmailsSendEmailRequest) => {
                 return this.client.emails.senviokApiEndpointsEmailsSendEmailEndpoint(options);
-            }
+            },
+            uploadAttachment: (file: Blob): import('./core/CancelablePromise').CancelablePromise<UploadedEmailAttachment> => {
+                return this.client.emails.uploadEmailAttachmentEndpoint({ file });
+            },
         };
     }
 

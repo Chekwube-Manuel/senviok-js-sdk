@@ -1,4 +1,5 @@
 export { SenviokClient, Senviok } from './SenviokClient';
+export { emailAttachmentFromBytes } from './emailAttachment';
 export { ApiError } from './core/ApiError';
 export { BaseHttpRequest } from './core/BaseHttpRequest';
 export { CancelablePromise, CancelError } from './core/CancelablePromise';
@@ -55,6 +56,8 @@ export type { SenviokApiEndpointsDomainsListDomainsResponse } from './models/Sen
 export type { SenviokApiEndpointsDomainsVerifyDomainRequest } from './models/SenviokApiEndpointsDomainsVerifyDomainRequest';
 export type { SenviokApiEndpointsDomainsVerifyDomainResponse } from './models/SenviokApiEndpointsDomainsVerifyDomainResponse';
 export type { SenviokApiEndpointsEmailsSendEmailRequest } from './models/SenviokApiEndpointsEmailsSendEmailRequest';
+export type { SenviokApiEndpointsEmailsSendEmailAttachmentRequest } from './models/SenviokApiEndpointsEmailsSendEmailAttachmentRequest';
+export type { UploadedEmailAttachment } from './models/UploadedEmailAttachment';
 export type { SenviokApiEndpointsEmailsSendEmailResponse } from './models/SenviokApiEndpointsEmailsSendEmailResponse';
 export type { SenviokApiEndpointsMessagesMessageAttachment } from './models/SenviokApiEndpointsMessagesMessageAttachment';
 export type { SenviokApiEndpointsMessagesMessageContent } from './models/SenviokApiEndpointsMessagesMessageContent';

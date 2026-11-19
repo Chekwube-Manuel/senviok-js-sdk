@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "generate": "npx openapi-typescript-codegen -i ../SenviokBackend/docs/openapi.json -o src -c fetch --name SenviokClient",
-    "build": "tsc"
+    "generate:email-attachments": "node scripts/generate-email-attachments.mjs",
+    "build": "tsc",
+    "test": "npm run build && node --test tests/*.test.cjs"
   },
   "devDependencies": {
     "@types/node": "^26.1.2",

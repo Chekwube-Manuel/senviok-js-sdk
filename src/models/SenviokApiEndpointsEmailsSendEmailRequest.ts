@@ -2,6 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { SenviokApiEndpointsEmailsSendEmailAttachmentRequest } from './SenviokApiEndpointsEmailsSendEmailAttachmentRequest';
 export type SenviokApiEndpointsEmailsSendEmailRequest = {
     from?: string;
     fromName?: string | null;
@@ -16,5 +17,7 @@ export type SenviokApiEndpointsEmailsSendEmailRequest = {
     templateData?: Record<string, string> | null;
     addUnsubscribeFooter?: boolean | null;
     addListUnsubscribeHeader?: boolean | null;
+    attachments?: Array<SenviokApiEndpointsEmailsSendEmailAttachmentRequest> | null;
+    attachmentIds?: Array<string> | null;
 };
 

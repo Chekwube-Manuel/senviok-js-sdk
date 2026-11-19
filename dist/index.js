@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebhooksService = exports.WaitlistService = exports.V1Service = exports.UnsubscribeService = exports.TemplatesService = exports.SuppressionsService = exports.SmsService = exports.SenderEmailsService = exports.OtpService = exports.MessagesService = exports.EmailsService = exports.DomainsService = exports.DefaultService = exports.BillingService = exports.AuthService = exports.AudiencesService = exports.ApiKeysService = exports.AnalyticsService = exports.AdminService = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.Senviok = exports.SenviokClient = void 0;
+exports.WebhooksService = exports.WaitlistService = exports.V1Service = exports.UnsubscribeService = exports.TemplatesService = exports.SuppressionsService = exports.SmsService = exports.SenderEmailsService = exports.OtpService = exports.MessagesService = exports.EmailsService = exports.DomainsService = exports.DefaultService = exports.BillingService = exports.AuthService = exports.AudiencesService = exports.ApiKeysService = exports.AnalyticsService = exports.AdminService = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.emailAttachmentFromBytes = exports.Senviok = exports.SenviokClient = void 0;
 /* generated using openapi-typescript-codegen -- do not edit */
 /* istanbul ignore file */
 /* tslint:disable */
@@ -8,6 +8,8 @@ exports.WebhooksService = exports.WaitlistService = exports.V1Service = exports.
 var SenviokClient_1 = require("./SenviokClient");
 Object.defineProperty(exports, "SenviokClient", { enumerable: true, get: function () { return SenviokClient_1.SenviokClient; } });
 Object.defineProperty(exports, "Senviok", { enumerable: true, get: function () { return SenviokClient_1.Senviok; } });
+var emailAttachment_1 = require("./emailAttachment");
+Object.defineProperty(exports, "emailAttachmentFromBytes", { enumerable: true, get: function () { return emailAttachment_1.emailAttachmentFromBytes; } });
 var ApiError_1 = require("./core/ApiError");
 Object.defineProperty(exports, "ApiError", { enumerable: true, get: function () { return ApiError_1.ApiError; } });
 var BaseHttpRequest_1 = require("./core/BaseHttpRequest");

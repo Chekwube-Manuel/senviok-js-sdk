@@ -6,6 +6,25 @@ class EmailsService {
         this.httpRequest = httpRequest;
     }
     /**
+     * @param formData
+     * @returns UploadedEmailAttachment Uploaded attachment metadata
+     * @throws ApiError
+     */
+    uploadEmailAttachmentEndpoint(formData) {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/emails/attachments',
+            formData: formData,
+            mediaType: 'multipart/form-data',
+            errors: {
+                400: `Invalid upload request`,
+                401: `Unauthorized`,
+                403: `Forbidden`,
+                413: `File too large`,
+            },
+        });
+    }
+    /**
      * @param requestBody
      * @returns SenviokApiEndpointsEmailsSendEmailResponse Success
      * @throws ApiError
